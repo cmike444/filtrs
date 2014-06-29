@@ -23,11 +23,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><b>filtrs.co</b></a>
+          <strong><%= link_to "filtrs.co", root_path, class: "navbar-brand"%></strong>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html">Already a member?</a></li>
+            <li><%= link_to "Already a member?", "#" %></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -42,10 +42,10 @@
 				<p class="text-center" style="font-weight:400;">
 					<%= link_to "About", about_path %>&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="#">Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">Press</a>
+					<%= link_to "Contact", contact_path %>&nbsp;&nbsp;&nbsp;&nbsp;
+					<%= link_to "Privacy", privacy_path %>&nbsp;&nbsp;&nbsp;&nbsp;
+					<%= link_to "Terms", terms_path %>&nbsp;&nbsp;&nbsp;&nbsp;
+					<%= link_to "Press", press_path %>
 				</p>
 				<p class="text-center">
 					<a href="#">
