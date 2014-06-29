@@ -28,7 +28,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Font Awesome
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+
+# Devise for Authentication
+gem 'devise'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

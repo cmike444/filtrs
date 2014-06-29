@@ -27,12 +27,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Already a member?", "#" %></li>
+            <li><%= link_to "Already a member?", user_session_path %></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+<%= render 'layouts/messages' %>
 <%= yield %>
 
 <div class="container">
