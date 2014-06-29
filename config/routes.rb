@@ -8,7 +8,10 @@ Filtrs::Application.routes.draw do
 
   # Example of regular route:
   get 'about' => 'welcome#about'
-
+  get 'contact' => 'welcome#contact'
+  get 'terms' => 'welcome#terms_of_service'
+  get 'privacy' => 'welcome#privacy_policy'
+  get 'press' => 'welcome#press'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
