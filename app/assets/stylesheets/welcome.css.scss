@@ -1,7 +1,39 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.nav-block {
-	height:100px;
+.block {
 	display:block;
+	height:100px;
 }
+.block.block-ten  {height:10px;}
+.block.block-twenty {height: 20px;}
+.block.block-thirty {height: 30px;}
+.block.block-fourty {height: 40px;}
+.block.block-fifty {height: 50px;}
+.block.block-sixty {height: 60px;}
+.block.block-seventy {height: 70px;}
+.block.block-eighty {height: 80px;}
+.block.block-ninety {height: 90px;}
+.block.block-hundred {height: 100px;}
+
+.footer-cta {
+	margin: 40px 0px;
+	padding: 20px 0px 40px;
+	background: #3498db;
+
+	h1 {
+		color:#fff;
+	}
+	h3 {
+		color:#e3e3e3;
+	}
+}
+
+#filtrs-footer {
+
+	.site-links a{
+	padding:0px 15px;
+	}
+
+}
+
