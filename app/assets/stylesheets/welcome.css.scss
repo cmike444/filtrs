@@ -19,8 +19,8 @@
 .footer-cta {
 	margin: 40px 0px;
 	padding: 20px 0px 40px 0px;
-	background: #3498db;
-
+	background: #3498db; /* Old browsers */
+    
 	h1 {
 		color:#fff;
 	}
@@ -67,8 +67,10 @@
 
  .panel-title a {
     color:#fff;
+    padding:20px 0px;
  }
  .portal {
     margin:80px 0px 0px 0px;
  }
+
 
