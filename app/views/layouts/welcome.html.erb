@@ -27,7 +27,22 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+            <li><%= link_to '#' do %>
+              <i class="fa fa-th text-white"></i>&nbsp;&nbsp; Filters
+              <% end %>
+            </li>
+            <li><%= link_to edit_user_registration_path do %>
+              <i class="fa fa-user text-white"></i>&nbsp;&nbsp; Account
+            <% end %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out text-white"></i>&nbsp;&nbsp; Sign Out
+            <% end %>
+            </li>
+            <% else %>
             <li><%= link_to "Already a member?", user_session_path %></li>
+            <% end %>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

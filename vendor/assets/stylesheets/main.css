@@ -200,6 +200,9 @@ font-weight: 400;
 }
 
 .text-white {color:#fff;}
+.text-dark {color:#444;}
+
+.hr-light{border-color:#ddd;}
 
 @media all and (max-width: 991px) {
 
