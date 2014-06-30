@@ -28,7 +28,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-            <li><%= link_to '#' do %>
+            <li><%= link_to filters_path do %>
               <i class="fa fa-th text-white"></i>&nbsp;&nbsp; Filters
               <% end %>
             </li>

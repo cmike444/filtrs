@@ -12,7 +12,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-            <li><%= link_to '#' do %>
+            <li><%= link_to filters_path do %>
               <i class="fa fa-th text-white"></i>&nbsp;&nbsp; Filters
               <% end %>
             </li>
@@ -32,9 +32,27 @@
       </div>
     </div>
     <div class="block"></div>
+    <div class="block block-sixty"></div>
 <div class="container">
 <div class="row">
-  
+      <!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#account" role="tab" data-toggle="tab">Account</a></li>
+  <li><a href="#billing" role="tab" data-toggle="tab">Billing</a></li>
+  <li><a href="#sensors" role="tab" data-toggle="tab">Sensors</a></li>
+  <li><a href="#hvac" role="tab" data-toggle="tab">HVAC Units</a></li>
+  <li><a href="#contractors" role="tab" data-toggle="tab">Contractors</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="account">...</div>
+  <div class="tab-pane active" id="billing">...</div>
+  <div class="tab-pane" id="messages">...</div>
+  <div class="tab-pane" id="hvac">...</div>
+  <div class="tab-pane" id="contractors">...</div>
+</div>
+
   <div class="col-md-6">
     <div class="portal">
       <div class="panel-body">
@@ -83,8 +101,6 @@
 <% end %>
 
 
-<p><strong class="text-dark">Unhappy? Cancel your account.</strong> <%= button_to "Cancel my account", registration_path(resource_name), :class => "btn btn-danger ", data: { confirm: "Are you sure?" }, method: :delete %></p>
-
 <%= link_to "Back", :back %>
 
       </div>
@@ -92,8 +108,14 @@
   </div>
   <div class="col-md-6">
   </div>
+  <div class="col-md-12">
+    <hr class="hr-light">
+    <p><strong class="text-dark">Unhappy? Cancel your account.</strong> <%= button_to "Cancel my account", registration_path(resource_name), :class => "btn btn-danger ", data: { confirm: "Are you sure?" }, method: :delete %></p>
+  </div>
 </div>
 </div>
+
+
 <div class="container">
   <div class="row">
     <div class="container">
