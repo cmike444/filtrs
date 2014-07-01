@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require label_better
+//= require account
 //= require turbolinks
 //= require_tree .
 
