@@ -33,6 +33,9 @@ gem 'font-awesome-rails'
 # Devise for Authentication
 gem 'devise'
 
+# Tabs
+gem 'tabulous'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

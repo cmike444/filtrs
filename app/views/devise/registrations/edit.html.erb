@@ -33,26 +33,8 @@
     </div>
     <div class="block"></div>
     <div class="block block-sixty"></div>
-<div class="container">
-<div class="row">
-      <!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#account" role="tab" data-toggle="tab">Account</a></li>
-  <li><a href="#billing" role="tab" data-toggle="tab">Billing</a></li>
-  <li><a href="#sensors" role="tab" data-toggle="tab">Sensors</a></li>
-  <li><a href="#hvac" role="tab" data-toggle="tab">HVAC Units</a></li>
-  <li><a href="#contractors" role="tab" data-toggle="tab">Contractors</a></li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="account">...</div>
-  <div class="tab-pane active" id="billing">...</div>
-  <div class="tab-pane" id="messages">...</div>
-  <div class="tab-pane" id="hvac">...</div>
-  <div class="tab-pane" id="contractors">...</div>
-</div>
-
+    <%= tabs %>
+    
   <div class="col-md-6">
     <div class="portal">
       <div class="panel-body">
@@ -67,7 +49,7 @@
           <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Leave this blank if you don't want to change it." %>
       </div>
     </div>
-
+    <hr class="hr-light">
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
