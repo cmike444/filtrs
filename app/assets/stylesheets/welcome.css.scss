@@ -78,4 +78,74 @@
     margin:80px 0px 0px 0px;
  }
 
+ .tour-cta {
+    width:100%;
+    height:320px;
+    display: block;
+    background: #3498db;
+
+    
+
+  &:hover {
+    background: #4cae4c;
+        -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+
+
+
+    .tour-cta-block {
+      h1 {
+
+        -webkit-animation: take_the_tour 2s infinite; /* Safari and Chrome */
+    -webkit-animation-direction: right; /* Safari and Chrome */
+    animation: take_the_tour 2s infinite;
+    animation-direction: right;
+      }
+    }
+  }
+
+  .tour-cta-block {
+    h1 {
+        font-size:60px;
+    }
+  }
+
+ }
+
+ .testimonials {
+
+    .testimonial {
+      max-width: 640px;
+    margin: 0px auto;
+    display: block;
+
+    h3 {
+      line-height: 1.5em;
+    }
+
+    img {
+      margin:0 auto;
+    }
+
+    }
+
+
+ }
+
+
+/* Safari and Chrome */
+@-webkit-keyframes take_the_tour {
+    0%   { padding-left:0px;}
+    50%  { padding-left:100px;}
+    100% { padding-left:0px;}
+}
+
+@keyframes take_the_tour {
+    0%   { left:0px;}
+    50%  { left:100px;}
+    100% { left:0px;}
+}
 
