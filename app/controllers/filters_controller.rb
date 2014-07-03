@@ -1,5 +1,6 @@
 class FiltersController < ApplicationController
   before_action :set_filter, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   layout "application"
 
   # GET /filters
