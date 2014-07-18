@@ -15,8 +15,9 @@ Filtrs::Application.routes.draw do
   get 'terms' => 'welcome#terms_of_service'
   get 'privacy' => 'welcome#privacy_policy'
   get 'press' => 'welcome#press'
+  get 'pricing' => 'welcome#pricing'
 
-  get 'users/sensors' => 'filters#list'
+  get 'users/filters' => 'filters#list'
 
   # User Onboarding
   # Example of named route that can be invoked with purchase_url(id: product.id)

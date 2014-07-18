@@ -7,7 +7,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% if user_signed_in? %>
+            <strong><%= link_to "filtrs", filters_path, class: "navbar-brand"%></strong>
+          <% else %>
+            <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% end %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -35,9 +39,9 @@
     <div class="block block-sixty"></div>
     <%= tabs %>
     
+    <br/>
   <div class="col-md-6">
-    <div class="portal">
-      <div class="panel-body">
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 <dl>
@@ -46,7 +50,7 @@
     <div class="form-group">
       <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Leave this blank if you don't want to change it." %>
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Leave this blank if you don't want to change it.", :readonly => true %>
       </div>
     </div>
     <hr class="hr-light">
@@ -71,9 +75,13 @@
     </div>
   </div>
 <hr class="hr-light">
+<dl>
+  <dt>Confirm Changes</dt>
+  <dd>Enter current password to confirm your changes.</dd>
+</dl>
   <div class="form-group">
       <div class="input-group">
-    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Current password to confirm your changes." %>
+    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Current password" %>
     <span class="input-group-btn">
       <%= f.submit "Update", :class => "btn btn-success btn-lg" %>
       </span>
@@ -85,8 +93,6 @@
 
 <%= link_to "Back", :back %>
 
-      </div>
-    </div>
   </div>
   <div class="col-md-6">
   </div>
@@ -95,34 +101,4 @@
     <p><strong class="text-dark">Unhappy? <%= link_to "Cancel your account", registration_path(resource_name), :class => "text-danger", data: { confirm: "Are you sure you want to cancel your account?" }, method: :delete %>.</strong></p>
   </div>
 </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="container">
-      <div id="filtrs-footer">
-        <p class="text-center site-links" style="font-weight:400;">
-          <%= link_to "About", about_path %>
-          <a href="#">Blog</a>
-          <%= link_to "Contact", contact_path %>
-          <%= link_to "Privacy", privacy_path %>
-          <%= link_to "Terms", terms_path %>
-          <%= link_to "Press", press_path %>
-        </p>
-        <p class="text-center">
-          <a href="#">
-            <i class="fa fa-twitter text-muted"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-          </a>
-          <a href="#">
-            <i class="fa fa-facebook text-muted"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-          </a>
-          <a href="#">
-            <i class="fa fa-google-plus text-muted"></i>
-          </a>
-        </p>
-        <p class="text-center">Created by Epicsteme, Inc. &copy; 2014</p>
-      </div>
-    </div>
-  </div>
 </div>

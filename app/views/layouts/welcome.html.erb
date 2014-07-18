@@ -23,7 +23,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% if user_signed_in? %>
+            <strong><%= link_to "filtrs", filters_path, class: "navbar-brand"%></strong>
+          <% else %>
+            <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% end %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -56,6 +60,7 @@
 			<div id="filtrs-footer">
 				<p class="text-center site-links" style="font-weight:400;">
 					<%= link_to "About", about_path %>
+          <%= link_to "Pricing", pricing_path %>
 					<a href="#">Blog</a>
 					<%= link_to "Contact", contact_path %>
 					<%= link_to "Privacy", privacy_path %>

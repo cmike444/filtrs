@@ -12,3 +12,18 @@
 		background:#eee;
 	}
 }
+
+.filter {
+	border:1px solid #ddd;
+
+	.filter-gauge {
+		margin:0 auto;
+		height:144px;
+		position: relative;
+
+		.circle-text {
+			position: absolute;
+			left:33%;
+		}
+	}
+}

@@ -22,7 +22,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% if user_signed_in? %>
+            <strong><%= link_to "filtrs", filters_path, class: "navbar-brand"%></strong>
+          <% else %>
+            <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% end %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

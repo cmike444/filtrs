@@ -10,20 +10,20 @@ Tabulous.setup do
       active_when   { in_action('any').of_controller('devise/registrations') }
     end
 
-    billing_tab do
-      text          { 'Billing' }
-      link_path     { '#' }
+    filters_tab do
+      text          { 'Filters' }
+      link_path     { users_filters_path }
       visible_when  { true }
       enabled_when  { true }
-      active_when   { in_action('any').of_controller('users/billing') }
+      active_when   { in_action('list').of_controller('filters') }
     end
 
     sensors_tab do
       text          { 'Sensors' }
-      link_path     { users_sensors_path }
+      link_path     { '#' }
       visible_when  { true }
       enabled_when  { true }
-      active_when   { in_action('list').of_controller('filters') }
+      active_when   { in_action('any').of_controller('users/sensors') }
     end
 
     hvac_tab do

@@ -1,35 +1,31 @@
 <div class="block"></div>
 <div class="block block-twenty"></div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <br/>
+  <div class="col-md-9">
 
-  <tbody>
     <% @filters.each do |filter| %>
-      <tr>
-        <td><strong><%= filter.name %></strong></td>
-        <td><%= filter.address %></td>
-        <td><%= filter.status %></td>
-        <td><%= link_to filter do %>
+    <div class="col-md-3 col-sm-3 col-xs-6">
+      <div class=" panel filter">
+      <div class="panel-heading text-center"><%= filter.address %></div>
+      <div id="myStat-<%= filter.id %>" class="filter-gauge" data-dimension="144" data-text="<%= filter.status %>" data-info="New Clients" data-width="10" data-fontsize="40" data-percent="<%= filter.status %>" data-fgcolor="#5bc0de" data-bgcolor="#eee" data-fill="#fff"></div>
+      <script type="text/javascript">
+        $('#myStat-<%= filter.id %>').circliful();
+      </script>
+      <p class="text-center">
+        <i class="fa fa-map-marker"></i>
+        <%= link_to filter do %>
           <i class="fa fa-bar-chart-o"></i>
-          <% end %>
-        </td>
-        <td><%= link_to edit_filter_path(filter) do %>
-          <i class="fa fa-edit"></i>
-          <% end %></td>
-        <!--<td><%= link_to filter, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fa fa-trash-o"></i>
-          <% end %></td>-->
-      </tr>
+        <% end %>
+        <i class="fa fa-truck"></i>
+        <i class="fa fa-share"></i>
+      </p>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+
+  </div>
+  <div class="col-md-3">
+  </div>
+</div>
