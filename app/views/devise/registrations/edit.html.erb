@@ -1,0 +1,104 @@
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <% if user_signed_in? %>
+            <strong><%= link_to "filtrs", filters_path, class: "navbar-brand"%></strong>
+          <% else %>
+            <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% end %>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+            <li><%= link_to filters_path do %>
+              <i class="fa fa-th text-white"></i>&nbsp;&nbsp; Filters
+              <% end %>
+            </li>
+            <li><%= link_to edit_user_registration_path do %>
+              <i class="fa fa-user text-white"></i>&nbsp;&nbsp; Account
+            <% end %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out text-white"></i>&nbsp;&nbsp; Sign Out
+            <% end %>
+            </li>
+            <% else %>
+            <li><%= link_to "Already a member?", user_session_path %></li>
+            <% end %>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="block"></div>
+    <div class="block block-sixty"></div>
+    <%= tabs %>
+    
+    <br/>
+  <div class="col-md-6">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+<dl>
+  <dt>Your Email Address</dt>
+</dl>
+    <div class="form-group">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Leave this blank if you don't want to change it.", :readonly => true %>
+      </div>
+    </div>
+    <hr class="hr-light">
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+<dl>
+  <dt>Change Password</dt>
+  <dd>Leave blank if you don't want to change it.</dd>
+</dl>
+  <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "Leave this blank if you don't want to change it." %>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: "Confirm new password." %>
+    </div>
+  </div>
+<hr class="hr-light">
+<dl>
+  <dt>Confirm Changes</dt>
+  <dd>Enter current password to confirm your changes.</dd>
+</dl>
+  <div class="form-group">
+      <div class="input-group">
+    <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Current password" %>
+    <span class="input-group-btn">
+      <%= f.submit "Update", :class => "btn btn-success btn-lg" %>
+      </span>
+    </div>
+  </div>
+
+<% end %>
+
+
+<%= link_to "Back", :back %>
+
+  </div>
+  <div class="col-md-6">
+  </div>
+  <div class="col-md-12">
+    <hr class="hr-light">
+    <p><strong class="text-dark">Unhappy? <%= link_to "Cancel your account", registration_path(resource_name), :class => "text-danger", data: { confirm: "Are you sure you want to cancel your account?" }, method: :delete %>.</strong></p>
+  </div>
+</div>
+</div>

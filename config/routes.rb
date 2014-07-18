@@ -1,4 +1,7 @@
 Filtrs::Application.routes.draw do
+  resources :filters
+
+  devise_for :users
   root "welcome#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -6,12 +9,17 @@ Filtrs::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  # Example of regular route:
+  # Front End Pages
   get 'about' => 'welcome#about'
   get 'contact' => 'welcome#contact'
   get 'terms' => 'welcome#terms_of_service'
   get 'privacy' => 'welcome#privacy_policy'
   get 'press' => 'welcome#press'
+  get 'pricing' => 'welcome#pricing'
+
+  get 'users/filters' => 'filters#list'
+
+  # User Onboarding
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

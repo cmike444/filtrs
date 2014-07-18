@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="filtrs.co helps home owners and commercial businesses forget about servicing their heating and cooling unit once and for all.">
-  <meta name="author" content="">  <title>filtrs.co</title>
+  <meta name="author" content="">  <title>filtrs | forget about your air filter.</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link rel="shortcut icon" href="#{ asset_path('favicon.ico') }" />
@@ -13,9 +13,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <% if user_signed_in? %>
+            <strong><%= link_to "filtrs", filters_path, class: "navbar-brand"%></strong>
+          <% else %>
+            <strong><%= link_to "filtrs", root_path, class: "navbar-brand"%></strong>
+          <% end %>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+            <li><%= link_to filters_path do %>
+              <i class="fa fa-th text-white"></i>&nbsp;&nbsp; Filters
+              <% end %>
+            </li>
+            <li><%= link_to edit_user_registration_path do %>
+              <i class="fa fa-user text-white"></i>&nbsp;&nbsp; Account
+            <% end %></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out text-white"></i>&nbsp;&nbsp; Sign Out
+            <% end %>
+            </li>
+            <% else %>
+            <li><%= link_to "Already a member?", user_session_path %></li>
+            <% end %>
 
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container">
+<%= render 'layouts/messages' %>
 <%= yield %>
-
+</div>
 
 </body>
 </html>

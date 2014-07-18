@@ -11,6 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140630031653) do
+
+  create_table "filters", force: true do |t|
+    t.integer  "filter_id"
+    t.integer  "user_id"
+    t.integer  "sensor_id"
+    t.string   "name"
+    t.integer  "status"
+    t.string   "address"
+    t.float    "lat"
+    t.float    "lon"
+    t.integer  "contractor_id"
+    t.integer  "hvac_id"
+    t.datetime "prev_request"
+    t.float    "price"
+    t.boolean  "delivered",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "filters", ["contractor_id"], name: "index_filters_on_contractor_id", unique: true
+  add_index "filters", ["filter_id"], name: "index_filters_on_filter_id", unique: true
+  add_index "filters", ["hvac_id"], name: "index_filters_on_hvac_id", unique: true
+  add_index "filters", ["status"], name: "index_filters_on_status"
+  add_index "filters", ["user_id"], name: "index_filters_on_user_id", unique: true
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

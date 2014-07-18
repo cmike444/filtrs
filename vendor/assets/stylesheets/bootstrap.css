@@ -3987,7 +3987,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .input-group-addon {
-  padding: 6px 12px;
+  padding: 5px 12px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -4152,7 +4152,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.428571429;
-  border: 1px solid transparent;
+  border: 1px solid #e9e9e9;
   border-radius: 4px 4px 0 0;
 }
 
@@ -4165,9 +4165,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555555;
   cursor: default;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #dddddd;
-  border-bottom-color: transparent;
+  border-bottom-color: #f9f9f9;
 }
 
 .nav-tabs.nav-justified {
@@ -5730,8 +5730,9 @@ a.list-group-item.active:focus .list-group-item-text {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 28px;
   color: inherit;
+  padding:10px 0px;
 }
 
 .panel-title > a {

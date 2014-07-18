@@ -1,0 +1,49 @@
+<div class="block"></div>
+<div class="block block-sixty"></div>
+<%= tabs %>
+<br/>
+<div class="row">
+  <div class="col-md-9">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @filters.each do |filter| %>
+          <tr>
+            <td><strong><%= filter.name %></strong></td>
+            <td><%= filter.address %></td>
+            <td><%= filter.status %></td>
+            <td><%= link_to filter do %>
+              <i class="fa fa-bar-chart-o"></i>
+              <% end %>
+            </td>
+            <td><%= link_to edit_filter_path(filter) do %>
+              <i class="fa fa-edit"></i>
+              <% end %></td>
+            <!--<td><%= link_to filter, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-trash-o"></i>
+              <% end %></td>-->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-3">
+    <%= link_to new_filter_path, class: "new-filter-well" do %>
+    <div class="well text-center">
+      <h4><i class="fa fa-plus"></i> New Filter</h4>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<br>

@@ -1,0 +1,35 @@
+// Place all the styles related to the filters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.new-filter-well .well {
+
+	h4 {
+		color:#3498db;
+	}
+	&:hover {
+		background:#eee;
+	}
+}
+
+.filter {
+	border:1px solid #ddd;
+
+	.filter-gauge {
+		margin:0 auto;
+		height:144px;
+		position: relative;
+
+		.circle-text {
+			position: absolute;
+			left:33%;
+		}
+	}
+	i {
+			color:#ccc;
+			&:hover {
+				color:#3498db;
+			}
+		}
+}

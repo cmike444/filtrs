@@ -87,7 +87,7 @@ a:after {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #2F88C5;
     margin: 1em 0;
     padding: 0;
 }
@@ -191,6 +191,18 @@ font-weight: 400;
     max-height: 50px;
     padding:10px;
 }
+
+.portal a {
+    color:#fff;
+}
+.portal p {
+    color:#eee;
+}
+
+.text-white {color:#fff;}
+.text-dark {color:#444;}
+
+.hr-light{border-color:#ddd;}
 
 @media all and (max-width: 991px) {
 
