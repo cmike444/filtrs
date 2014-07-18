@@ -16,6 +16,8 @@ Filtrs::Application.routes.draw do
   get 'privacy' => 'welcome#privacy_policy'
   get 'press' => 'welcome#press'
 
+  get 'users/sensors' => 'filters#list'
+
   # User Onboarding
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

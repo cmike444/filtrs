@@ -80,7 +80,7 @@
 
  .tour-cta {
     width:100%;
-    height:320px;
+    padding:50px 0px;
     display: block;
     background: #3498db;
 
@@ -124,14 +124,53 @@
 
     h3 {
       line-height: 1.5em;
+      padding:0 10px;
     }
 
     img {
       margin:0 auto;
+      border:1px solid #eee;
     }
 
     }
 
+
+ }
+
+ .locations-cta {
+    width:100%;
+    padding:50px 0px;
+    display: block;
+    background-color: #3498db;
+
+    
+
+  &:hover {
+    background: #4cae4c;
+        -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+
+
+
+
+    .locations-cta-block {
+      h1 {
+
+        -webkit-animation: take_the_tour 2s infinite; /* Safari and Chrome */
+    -webkit-animation-direction: right; /* Safari and Chrome */
+    animation: take_the_tour 2s infinite;
+    animation-direction: right;
+      }
+    }
+  }
+
+  .locations-cta-block {
+    h1 {
+        font-size:60px;
+    }
+  }
 
  }
 

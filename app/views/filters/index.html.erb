@@ -16,7 +16,7 @@
   <tbody>
     <% @filters.each do |filter| %>
       <tr>
-        <td><%= filter.name %></td>
+        <td><strong><%= filter.name %></strong></td>
         <td><%= filter.address %></td>
         <td><%= filter.status %></td>
         <td><%= link_to filter do %>
@@ -33,7 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Filter', new_filter_path %>

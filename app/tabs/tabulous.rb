@@ -20,10 +20,10 @@ Tabulous.setup do
 
     sensors_tab do
       text          { 'Sensors' }
-      link_path     { '#' }
+      link_path     { users_sensors_path }
       visible_when  { true }
       enabled_when  { true }
-      active_when   { in_action('any').of_controller('users/sensors') }
+      active_when   { in_action('list').of_controller('filters') }
     end
 
     hvac_tab do

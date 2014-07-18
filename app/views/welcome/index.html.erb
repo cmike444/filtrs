@@ -8,7 +8,7 @@
 				  <div class="input-group">
 				    <input type="email" class="form-control label_better2" id="exampleInputEmail1" data-new-placeholder="You're almost there!" placeholder="Enter your email address">
 				    <span class="input-group-btn">
-				    	<button type="submit" class="btn btn-success btn-lg">Invite &nbsp;Me!</button>
+				    	<button type="submit" class="btn btn-success btn-lg">Get Started!</button>
 				    </span>
 				  </div>
 				</form>					
@@ -27,7 +27,54 @@
 		</div>
 	</div>
 	
-	
+	<div class="container">
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Extend the Life<br/>of Your HVAC System.</h1>
+				<h3>A dirty air filter is the #1 reason for HVAC failure.</h3>
+			</div>
+		</div><!-- /row -->
+		
+		<div class="row mt centered">
+			<div class="col-lg-4">
+				<%= image_tag('ser01.png', width:'180', class: '') %>
+				<h4>1 - Track Air Filter Status</h4>
+				<p>Attach the beamer components on either side of your air filter insde the hvac unit. Once installed, get re-occuring air filter status updates through the app.</p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<%= image_tag('ser02.png', width:'180', class: '') %>
+				<h4>2 - Get Filters Delivered</h4>
+				<p>Filtrs.co lets you know when the status of your air filter is getting unacceptable and sends you a new filter automatically for one low monthly fee.</p>
+
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<%= image_tag('ser03.png', width:'180', class: '') %>
+				<h4>3 - Enjoy the Benefits</h4>
+				<ul class="text-left" style="width:280px; margin:0 auto;line-height:28px;list-style:none;">
+					<li> <i class="fa fa-check"></i> Extend HVAC Life</li>
+					<li> <i class="fa fa-check"></i> Save on Energy Usage</li>
+					<li> <i class="fa fa-check"></i> Breathe Cleaner Air</li>
+				</ul>
+				<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>-->
+
+			</div><!--/col-lg-4 -->
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+  <a href="#">
+    <div class="tour-cta">
+      <div class="container">
+        <h3 class="text-center text-white">Learn what filtrs can do for you</h3>
+          <div class="tour-cta-block">
+            <h1 class="text-center text-white">Take the Tour <i class="fa fa-arrow-circle-right text-white"></i></h1>
+          </div>
+          <h3 class="text-center text-white">Screenshots, feature descriptions, and more</h3>
+      </div>
+    </div>
+  </a>
+
 	<div class="container">
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
@@ -65,41 +112,54 @@
 	</div><!-- /container -->
 	
   <a href="#">
-	<div class="tour-cta">
-    <div class="container">
-      <div class="block block-fifty"></div>
-			<h3 class="text-center text-white">Learn what filtrs can do for you</h3>
-          <div class="tour-cta-block">
-            <h1 class="text-center text-white">Take the Tour <i class="fa fa-arrow-circle-right text-white"></i></h1>
+  	<div class="locations-cta">
+      <div class="container">
+  			<h3 class="text-center text-white">filtrs works with local HVAC contractors all over the nation</h3>
+          <div class="locations-cta-block">
+            <h1 class="text-center text-white">See our full list of locations <i class="fa fa-arrow-circle-right text-white"></i></h1>
           </div>
-          <h3 class="text-center text-white">Screenshots, feature descriptions, and more</h3>
-          <br/>
-			<br/>
-    </div>
-	</div>
-</a>
+      </div>
+  	</div>
+  </a>
 
 
   <div class="testimonials">
-    <div class="row">
-      <div class="testimonial text-center">
-        <div class="block block-fifty"></div>
-          <%= image_tag 'pic3.jpg', class: 'img-circle img-responsive testimonial-img' %>
+    	<div class="container">
+      <div class="col-md-4 testimonial text-center">
+        <div class="block"></div>
+          <%= image_tag 'pic5.jpg', class: 'img-circle img-responsive testimonial-img', width: '150px'%>
         
-        <h3>"I am basically in love with filtrs. It took us less than 5 minutes to get set up. Now, I can just forget about changing my air filter again until it shows up in the mail."</h3>
+        <h3>"Damn. This is so simple, I wish this was around 10 years ago. My clients love it!"</h3>
+        <p><strong>HVAC Dude, Illinois</strong></p>
+        <br/>
+      </div>
+      <div class="col-md-4 testimonial text-center">
+        <div class="block"></div>
+          <%= image_tag 'pic4.jpg', class: 'img-circle img-responsive testimonial-img', width: '150px' %>
+        
+        <h3>"I love being able to forget about changing my building's air filters until they show up in the mail."</h3>
+        <p><strong>Property Manager, Michigan</strong></p>
+        <br/>
+      </div>
+      <div class="col-md-4 testimonial text-center">
+        <div class="block"></div>
+          <%= image_tag 'pic3.jpg', class: 'img-circle img-responsive testimonial-img', width: '150px' %>
+        
+        <h3>"Filtrs is awesome because it is one more thing chipping away at my energy bill."</h3>
         <p><strong>Cool Dude, Iowa</strong></p>
         <br/>
-        <p>See what <a href="#">people are saying</a> about filtrs</p>
       </div>
-    </div>
+  	</div>
+  	<p class="text-center" style="font-size:28px;">See what <a href="#">people are saying</a> about filtrs</p>
+  	<div class="block block-thirty"></div>
   </div>
 
 	
 		<div class="row centered footer-cta">
 			<div class="container  centered">
-				<div class="col-lg-6 col-lg-offset-3">
-          <h1>Want to try it out?<br/></h1>
-					<h3>Enter your email below and we'll take it from there.</h3>
+				<div class="col-lg-8 col-lg-offset-2">
+          			<h1>Want to try it out?<br/></h1>
+					<h3>Enter your email below and we'll take care of the rest.</h3>
 					<br/>
 				</div>
 			</div><!-- /row -->
@@ -108,7 +168,7 @@
 				  <div class="input-group">
 				    <input type="email" class="form-control label_better" id="exampleInputEmail1" data-new-placeholder="Join the revolution..." placeholder="dude@sweet.com">
 				    <span class="input-group-btn">
-				    	<button type="submit" class="btn btn-success btn-lg">Invite Me!</button>
+				    	<button type="submit" class="btn btn-success btn-lg">Get Started!</button>
 				    </span>
 				  </div>
 				  
