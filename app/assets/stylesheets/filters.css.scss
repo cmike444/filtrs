@@ -26,4 +26,10 @@
 			left:33%;
 		}
 	}
+	i {
+			color:#ccc;
+			&:hover {
+				color:#3498db;
+			}
+		}
 }
